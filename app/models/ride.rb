@@ -5,7 +5,7 @@ class Ride < ActiveRecord::Base
 
   def take_ride
     ticket_cost = 5
-    if  self.user.to_num < ticket_cost
+    if  user.self < ticket_cost
       "Sorry. You do not have enough tickets the #{self.attraction.name}."
     end
   end
