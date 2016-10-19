@@ -1,5 +1,13 @@
-<%= @user.name%>
-<%= @user.nausea%>
-<%= @user.happiness%>
-<%= @user.tickets%>
-<%= @user.height%>
+<% if @user.admin %>
+  <p><strong>ADMIN</strong></p>
+<% end %>
+<% if logged_in? %>
+  <%= @user.name%>
+  <%= @user.nausea%>
+  Mood: <%= @user.mood %>
+  <%= @user.happiness%>
+  <%= @user.tickets%>
+  <%= @user.height%>
+<% else %>
+<% require_logged_in %>
+<% end %>

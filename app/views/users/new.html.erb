@@ -1,25 +1,27 @@
-<%= form_for :user, url: user_path(@user) do |f| %>
 
-  <%= f.label :name %><br>
-  <%= f.text_field :name %><br>
+<%= form_for @user do |f| %>
 
-  <%= f.label :password %><br>
-  <%= f.text_field :password %><br>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
 
-  <%= f.label :nausea %><br>
-  <%= f.text_field :nausea %><br>
+    <%= f.label :height, "Height (in inches)" %>
+    <%= f.number_field :height %><br>
 
-  <%= f.label :happiness %><br>
-  <%= f.text_field :happiness %><br>
+    <%= f.label :happiness, "How happy are you? (1-5 scale)" %>
+    <%= f.number_field :happiness %><br>
 
-  <%= f.label :tickets %><br>
-  <%= f.text_field :tickets %><br>
+    <%= f.label :nausea, "How nauseous are you? (1-5 scale)" %>
+    <%= f.number_field :nausea %><br>
 
-  <%= f.label :height %><br>
-  <%= f.text_field :height %>
-  <!-- <% if @user.admin %> -->
-    <%= f.submit "Creat User" if @user.admin%>
-  <!-- <% else %> -->
-    <%= f.submit "Sign up" if !@user.admin%>
-  <!-- <% end %> -->
+    <%= f.label :tickets, "How many dollars are in your pocket?" %>
+    <%= f.number_field :tickets %><br>
+
+    <%= f.label :admin, "Check box if you are a theme park owner" %>
+    <%= f.check_box :admin%><br>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+
+    <%= f.submit %>
+  </div>
 <% end %>
