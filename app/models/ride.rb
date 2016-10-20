@@ -2,6 +2,14 @@ class Ride < ActiveRecord::Base
   belongs_to :attraction
   belongs_to :user
 
+  # def take_ride
+  #    # --ticket update
+  #    user = self.user
+  #    attraction = self.attraction
+  #    new_tickets = user.tickets - attraction.tickets
+  #    new_user_tickets = self.user.update(:tickets=> new_tickets)
+  # end
+
   def take_ride
      enough_tickets, tall_enough = meet_requirements
      if enough_tickets && tall_enough
