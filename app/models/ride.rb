@@ -31,7 +31,7 @@ class Ride < ActiveRecord::Base
      if self.user.height >= self.attraction.min_height
        tall_enough = true
      end
-     return [enough_tickets, tall_enough]
+      [enough_tickets, tall_enough]
    end
 
    def start_ride
@@ -47,7 +47,7 @@ class Ride < ActiveRecord::Base
    end
 
    def ticket_issue
-     "You do not have enough tickets the #{self.attraction.name}."
+     "You do not have enough tickets to ride the #{self.attraction.name}."
    end
 
    def height_issue
