@@ -6,8 +6,10 @@
   <%= @user.nausea%>
   Mood: <%= @user.mood %>
   <%= @user.happiness%>
-  <%= @user.tickets%>
+  Tickets:<%= @user.tickets%>
   <%= @user.height%>
 <% else %>
 <% require_logged_in %>
 <% end %>
+<p><%= link_to 'Edit', edit_user_path(@user) %></p>
+ <p><%= link_to 'See attractions', attractions_path %></p>
