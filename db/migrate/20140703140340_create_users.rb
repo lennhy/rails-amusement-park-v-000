@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_digest
       t.integer :nausea
       t.integer :happiness
-      t.string :tickets
+      t.integer :tickets
       t.integer :height
       t.boolean :admin, default: :false
 

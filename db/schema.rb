@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140703140419) do
 
   create_table "attractions", force: :cascade do |t|
     t.string  "name"
-    t.string  "tickets"
+    t.integer "tickets"
     t.integer "nausea_rating"
     t.integer "happiness_rating"
     t.integer "min_height"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140703140419) do
     t.string  "password_digest"
     t.integer "nausea"
     t.integer "happiness"
-    t.string  "tickets"
+    t.integer "tickets"
     t.integer "height"
     t.boolean "admin",           default: false
   end
