@@ -12,6 +12,7 @@ Rails.application.routes.draw do
    # users
    post "/users/:id", to: "users#show"
 
+   post "/attractions/:id", to: "attractions#show"
   resources :users
   resources :attractions
 

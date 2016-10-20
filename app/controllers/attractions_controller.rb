@@ -5,12 +5,11 @@ class AttractionsController < ApplicationController
     @attractions = Attraction.all
   end
 
-  def show
-    @ride = Ride.new
-  end
-
   def new
     @attraction = Attraction.new
+  end
+
+  def show
   end
 
   def edit

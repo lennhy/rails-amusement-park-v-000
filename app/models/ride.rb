@@ -2,21 +2,6 @@ class Ride < ActiveRecord::Base
   belongs_to :attraction
   belongs_to :user
 
-  # def start_ride
-  #   remaining_tickets = self.user.tickets - self.attraction.tickets
-  #   self.user.update(:tickets=> remaining_tickets)
-  # end
-  #
-  # def take_ride
-  #   user_tickets = self.user.tickets.to_i
-  #   attraction_tickets = self.attraction.tickets.to_i
-  #   if user_tickets < attraction_tickets
-  #     "Sorry. You do not have enough tickets the #{self.attraction.name}."
-  #   elsif self.user.height < self.attraction.min_height
-  #      "You are not tall enough to ride the #{attraction.name}."
-  #   end
-  # end
-  #
   def take_ride
      enough_tickets, tall_enough = meet_requirements
      if enough_tickets && tall_enough
